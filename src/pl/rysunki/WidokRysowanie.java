@@ -11,7 +11,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.MotionEvent;
 
-//Do zmieniania rozmiaru pêdzla
+//Do zmieniania rozmiaru pÄ™dzla
 import android.graphics.PorterDuff;
 import android.util.TypedValue;
 //--
@@ -19,12 +19,12 @@ import android.util.TypedValue;
 public class WidokRysowanie extends View {
 
 	//Pola klasy
-	private Path 	sciezka; 					//Scie¿ka
-	private Paint 	farba, farbaKanwy; 			//farba
-	private int 	kolorFarby = 0xD067D3; 		//Pocz¹tkowy kolor farby (ciemny fiolet)
-	private Canvas 	kanwa; 						//Kanwa
-	private Bitmap 	bitmapaKanwy; 				//Bitmapa nale¿¹ca do kanwy
-	private float rozmiarPedzla, popRozmiarPedzla; //Rozmiary pêdzla
+	private Path 	sciezka; 			//ScieÅ¼ka
+	private Paint 	farba, farbaKanwy; 		//farba
+	private int 	kolorFarby = 0xD067D3; 		//PoczÄ…tkowy kolor farby (ciemny fiolet)
+	private Canvas 	kanwa; 				//Kanwa
+	private Bitmap 	bitmapaKanwy; 			//Bitmapa naleÅ¼Ä…ca do kanwy
+	private float rozmiarPedzla, popRozmiarPedzla; //Rozmiary pÄ™dzla
 	
 	//Konstruktor
 	public WidokRysowanie(Context k, AttributeSet attrs){
@@ -34,35 +34,35 @@ public class WidokRysowanie extends View {
 	
 	private void przygotujPowierzchnie(){
 		
-		//Pocz¹tkowy rozmiar pêdzla to œredni 
+		//PoczÄ…tkowy rozmiar pÄ™dzla to Å›redni 
 		rozmiarPedzla = getResources().getInteger(R.integer.sredni_rozmiar);
 		//Zapisz rozmiar, aby w razie anulowania ostatniej
-		//akcji móc wróciæ do poprzedniego rozmiaru
+		//akcji mÃ³c wrÃ³ciÄ‡ do poprzedniego rozmiaru
 		popRozmiarPedzla = rozmiarPedzla;
 		
-		//Przygotuj powierzchniê do rysowania (interakcji)      
-		//Zainicjuj niektóre pola klasy
+		//Przygotuj powierzchniÄ™ do rysowania (interakcji)      
+		//Zainicjuj niektÃ³re pola klasy
 		sciezka  = new Path();
 		farba = new Paint();
 		
-		//Przypisz farbie pocz¹tkowy kolor
+		//Przypisz farbie poczÄ…tkowy kolor
 		farba.setColor(kolorFarby);
 		
-		//Przypisz inne w³aœciwoœci farby wp³ywaj¹ce na ob³y wygl¹d pêdzla
+		//Przypisz inne wÅ‚aÅ›ciwoÅ›ci farby wpÅ‚ywajÄ…ce na obÅ‚y wyglÄ…d pÄ™dzla
 		farba.setAntiAlias(true); 
-		farba.setStrokeWidth(rozmiarPedzla); //U¿yj rozmiaru pêdzla
+		farba.setStrokeWidth(rozmiarPedzla); //UÅ¼yj rozmiaru pÄ™dzla
 		farba.setStyle(Paint.Style.STROKE);
 		farba.setStrokeJoin(Paint.Join.ROUND);
 		farba.setStrokeCap(Paint.Cap.ROUND);
 		
-		//Stwórz kanwê
+		//StwÃ³rz kanwÄ™
 		farbaKanwy = new Paint(Paint.DITHER_FLAG);
 	}
 	
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		
-		//Wywo³aj metodê klasy View
+		//WywoÅ‚aj metodÄ™ klasy View
 		super.onSizeChanged(w, h, oldw, oldh);
 		
 		//Dostosuj rozmiar bitmapy do nowego ekranu
@@ -73,16 +73,16 @@ public class WidokRysowanie extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		
-		//Rysowanie bitmapy aktualn¹ farb¹
+		//Rysowanie bitmapy aktualnÄ… farbÄ…
 		canvas.drawBitmap(bitmapaKanwy, 0, 0, farbaKanwy);
-		//Rysowanie œcie¿ki aktualn¹ farb¹
+		//Rysowanie Å›cieÅ¼ki aktualnÄ… farbÄ…
 		canvas.drawPath(sciezka, farba);
 	}
 	
 	@Override
 	public boolean onTouchEvent(MotionEvent zdarzenie) {
 		
-		//Zapisz wspó³rzêdne dotyku
+		//Zapisz wspÃ³Å‚rzÄ™dne dotyku
 		float wspolrzednaX = zdarzenie.getX();
 		float wspolrzednaY = zdarzenie.getY(); 
 		
@@ -102,28 +102,28 @@ public class WidokRysowanie extends View {
 			    return false;
 		}
 		
-		invalidate(); //Uaktualnij widok, wywo³uje onDraw
+		invalidate(); //Uaktualnij widok, wywoÅ‚uje onDraw
 		return true;
 	}
 	
 	public void zastosujKolor(String nowyKolor){
 		
-		invalidate();   //odœwie¿ widok
-		//Stwórz kolor na podstawie nazwy
+		invalidate();   //odÅ›wieÅ¼ widok
+		//StwÃ³rz kolor na podstawie nazwy
 		kolorFarby = Color.parseColor(nowyKolor);
 		farba.setColor(kolorFarby);
 			}
 
 	public void zastosujRozmiarPedzla(float nowyRozmiar){
 	
-	//Oblicz rozmiar pêdzla w pikselach
+	//Oblicz rozmiar pÄ™dzla w pikselach
 	float pixelAmount = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 
 			nowyRozmiar, getResources().getDisplayMetrics());
 	
 	//Przypisz wynik zmiennej klasy
 	rozmiarPedzla=pixelAmount;
 		
-	//Zmieñ rozmiar pêdzla na nowy, aktualizuj obiekt Paint	
+	//ZmieÅ„ rozmiar pÄ™dzla na nowy, aktualizuj obiekt Paint	
 	farba.setStrokeWidth(rozmiarPedzla);
 	}
 
@@ -137,8 +137,8 @@ public class WidokRysowanie extends View {
 
 	public void nowaKartka(){
 	//Metoda wykorzystywana dla przycisku "nowy" w glowna_aktywnosc
-	//Tworzy "now¹ kartkê w bloku rysunkowym"
-    kanwa.drawColor(0, PorterDuff.Mode.CLEAR); //wyczyœæ kanwê
-    invalidate(); //nanieœ zmiany
+	//Tworzy "nowÄ… kartkÄ™ w bloku rysunkowym"
+    kanwa.drawColor(0, PorterDuff.Mode.CLEAR); //wyczyÅ›Ä‡ kanwÄ™
+    invalidate(); //nanieÅ› zmiany
 }
 }
