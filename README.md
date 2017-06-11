@@ -10,13 +10,13 @@ A simple Android paint app made with:
 - "New picture" button,
 - "Save" button saving pictures to phone's gallery.
 
-Jump to application's core code: 
-[Main activity](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/src/pl/rysunki/GlownaAktywnosc.java)
-[Paint view](AndroidPaintApp/src/pl/rysunki/WidokRysowanie.java)
+Jump to application's core code (in Polish): 
+- [Main activity](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/src/pl/rysunki/GlownaAktywnosc.java)
+- [Paint view](AndroidPaintApp/src/pl/rysunki/WidokRysowanie.java)
 
 ## Printscreens:
 ### Main application view
-![alt tag](AndroidPaintApp/Printscreens/PaintAppPrintScreen.png)
+![alt tag](AndroidPaintApp/Printscreens/PaintAppPrintScreen.png?raw=true)
 
 ### Choosing the brush size
 ![alt tag](AndroidPaintApp/Printscreens/PaintApp_AdjustBrushSize.png)
