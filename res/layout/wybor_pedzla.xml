@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+ 
+	<!-- 3 Przyciski rozmiaru pędzla -->
+	<ImageButton
+	    android:id="@+id/maly_pedzel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:contentDescription="@string/maly"
+	    android:src="@drawable/maly" />
+	 
+	<ImageButton
+	    android:id="@+id/sredni_pedzel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:contentDescription="@string/sredni"
+	    android:src="@drawable/sredni" />
+	 
+	<ImageButton
+	    android:id="@+id/duzy_pedzel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:contentDescription="@string/duzy"
+	    android:src="@drawable/duzy" />
+</LinearLayout>

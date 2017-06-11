@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rysunki</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nowy">Nowy</string>
+	<string name="pedzel">Pędzel</string>
+	<string name="wyczysc">Wyczyść</string>
+	<string name="zapisz">Zapisz</string>
+	<string name="rysuj">Rysuj</string>
+	
+	<string name="dialog_pedzel_tytul">Rozmiar pędzla</string>
+	
+	<string name="maly">Mały</string>
+	<string name="sredni">Średni</string>
+	<string name="duzy">Duży</string>
+	
+	<string name="bialy">#FFFFFF</string>
+</resources>

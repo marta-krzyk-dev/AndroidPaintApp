@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/aktywnosc_margines_pionowy"
+    android:paddingLeft="@dimen/aktywnosc_margines_poziomy"
+    android:paddingRight="@dimen/aktywnosc_margines_poziomy"
+    android:paddingTop="@dimen/aktywnosc_margines_pionowy"
+    tools:context="pl.rysunki.GlownaAktywnosc" >
+ 
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+    
+        <ImageButton
+            android:id="@+id/button_nowa_kartka"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/nowy"
+            android:src="@drawable/ic_nowy" />
+        
+        <ImageButton
+    		android:id="@+id/button_rozmiar_pedzla"
+   		 	android:layout_width="wrap_content"
+    		android:layout_height="fill_parent"
+    		android:contentDescription="@string/pedzel"
+    		android:src="@drawable/ic_pedzel" />
+        
+        <ImageButton
+            android:id="@+id/button_zapisz"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/zapisz"
+            android:src="@drawable/ic_zapis" />
+
+	</LinearLayout>
+
+    <pl.rysunki.WidokRysowanie
+        android:id="@+id/widok_rys"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF" />
+    
+    <!-- Paleta kolorów -->
+	    <LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:orientation="vertical" >
+        
+	        <!-- Rząd I kolorów -->
+			<LinearLayout
+			    android:id="@+id/paleta_kolorow"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    <!-- Ciemny Fiolet -->
+			    <ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#D067D3"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#D067D3" />
+				<!-- Czerwony -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#F00000"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#F00000" />
+				<!-- Różowy --> 
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#FFAEC9"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#FFAEC9" />
+				 <!-- Pomarańczowy -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#FFC600"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#FFC600" />
+				 <!-- Żółty -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#FFF200"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#FFF200" />
+				 <!-- Brązowy -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#B97A57"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#B97A57" />
+			</LinearLayout>
+			
+			<!-- Rząd II kolorów -->
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+				<!-- Jasny Niebieski -->
+			    <ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#99D9EA"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#99D9EA" />
+				 <!-- Ciemny zielony -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#22B14C"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#22B14C" />
+				 <!-- Jasny zielony -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#B5E61D"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#B5E61D" />
+				 <!-- Biały -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#FFFFFFFF"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#FFFFFFFF" />
+				 <!-- Szary -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#C3C3C3"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#C3C3C3" />
+				 <!-- Czarny -->
+				<ImageButton
+				    android:layout_width="@dimen/duzy_pedzel"
+				    android:layout_height="@dimen/duzy_pedzel"
+				    android:layout_margin="2dp"
+				    android:background="#FF000000"
+				    android:contentDescription="@string/rysuj"
+				    android:onClick="paintClicked"
+				    android:src="@drawable/przycisk_niewybrany"
+				    android:tag="#FF000000" />
+				
+			</LinearLayout>
+		</LinearLayout>
+    
+</LinearLayout>

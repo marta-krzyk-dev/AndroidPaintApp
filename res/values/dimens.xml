@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="aktywnosc_margines_poziomy">8dp</dimen>
+    <dimen name="aktywnosc_margines_pionowy">8dp</dimen>
+
+    <!-- Rozmiary pędzla -->
+	<dimen name="maly_pedzel">10dp</dimen>
+	<integer name="maly_rozmiar">10</integer>
+	<dimen name="sredni_pedzel">20dp</dimen>
+	<integer name="sredni_rozmiar">20</integer>
+	<dimen name="duzy_pedzel">30dp</dimen>
+	<integer name="duzy_rozmiar">30</integer>
+
+</resources>
