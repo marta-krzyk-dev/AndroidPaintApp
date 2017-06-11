@@ -16,13 +16,13 @@ Jump to application's core code (in Polish):
 
 ## Printscreens:
 ### Main application view
-![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/Printscreens/PaintAppPrintScreen.png?raw=true)
+![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/Printscreens/PaintAppPrintScreen.png?raw=true)
 
 ### Choosing the brush size
-![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/Printscreens/PaintApp_AdjustBrushSize.png)
+![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/Printscreens/PaintApp_AdjustBrushSize.png?raw=true)
 
 ### Creating a blank picture
 ![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/Printscreens/PaintApp_NewPicture.png?raw=true)
 
 ### Pictures made with the application are saved to phone's gallery
-![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/Printscreens/PaintAppGallery.png)
+![alt tag](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/Printscreens/PaintAppGallery.png?raw=true)
