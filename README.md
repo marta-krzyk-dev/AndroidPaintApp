@@ -12,7 +12,7 @@ A simple Android paint app made with:
 
 Jump to application's core code (in Polish): 
 - [Main activity](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/src/pl/rysunki/GlownaAktywnosc.java)
-- [Paint view](AndroidPaintApp/src/pl/rysunki/WidokRysowanie.java)
+- [Paint view](https://github.com/marta-krzyk-dev/AndroidPaintApp/blob/master/src/pl/rysunki/WidokRysowanie.java)
 
 ## Printscreens:
 ### Main application view
